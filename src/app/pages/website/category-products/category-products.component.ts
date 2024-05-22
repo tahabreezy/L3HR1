@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../services/product/product.service';
 import { CommonModule } from '@angular/common';
-// @ts-ignore
 import { CardComponent } from '../../../shared/components/card/card.component';
 import { LoginService } from '../../../services/login/login.service';
 import { ToastrService } from 'ngx-toastr';
