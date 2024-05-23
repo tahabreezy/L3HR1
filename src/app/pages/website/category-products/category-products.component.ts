@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../../services/product/product.service';
-import { CommonModule } from '@angular/common';
-import { CardComponent } from '../../../shared/components/card/card.component';
-import { LoginService } from '../../../services/login/login.service';
-import { ToastrService } from 'ngx-toastr';
+import {Component} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {ProductService} from '../../../services/product/product.service';
+import {CommonModule} from '@angular/common';
+// @ts-ignore
+import {CardComponent} from '../../../shared/components/card/card.component';
+import {ToastrService} from 'ngx-toastr';
+
 @Component({
   selector: 'app-category-products',
   standalone: true,
@@ -24,10 +25,9 @@ export class CategoryProductsComponent {
       this.loadProducts();
     });
 
-    const localData = sessionStorage.getItem('bigBasket_user');
+    const localData = sessionStorage.getItem('lehri_user');
     if (localData !== null) {
-      const parseObj = JSON.parse(localData);
-      this.loggedInObj = parseObj;
+      this.loggedInObj = JSON.parse(localData);
     }
   }
 
